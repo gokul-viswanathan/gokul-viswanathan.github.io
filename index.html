@@ -3,8 +3,7 @@
 
 <head> 
 	<meta charset="UTF-8"> 
-	<meta name="viewport"
-		content="width=device-width, initial-scale=1.0"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 	<title>Gokul Viswanathan</title> 
 	<link rel="stylesheet"
 		href= 
@@ -22,10 +21,6 @@
 			<div class="logo"> 
 				<h2 class="logo-heading">Gokul Viswanathan</h2> 
 			</div> 
-			<div class="hamburger" id="hamburger"> 
-				<i class="fas fa-bars hamburger-icon"></i> 
-				<i class="fas fa-times cross-icon"></i> 
-			</div> 
 			<div class="menu"> 
 				<ul class="menu-list"> 
 					<li class="menu-list-items"> 
@@ -33,11 +28,11 @@
 							Home 
 						</a> 
 					</li> 
-					<li class="menu-list-items"> 
+					<!-- <li class="menu-list-items"> 
 						<a class="links" href="#about"> 
 							About Me
 						</a> 
-					</li> 
+					</li>  -->
                     <li class="menu-list-items"> 
 						<a class="links" href="#work"> 
 							Experience 
@@ -54,7 +49,7 @@
 						</a> 
 					</li>  -->
 					<li class="menu-list-items"> 
-						<a class="links" href="#contact"> 
+						<a class="links" href="#footer"> 
 							Contact Me 
 						</a> 
 					</li> 
@@ -69,19 +64,20 @@
 			<div class="headings"> 
 				<h3 class="greet-heading">Hello, I'm</h3> 
 				<h1 class="my-heading">Gokul Viswanathan</h1> 
-				<p class="my-sub-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p> 
+				<!-- <p class="my-sub-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>  -->
 				<h4 class="sub-heading"> 
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-					sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-					Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-					nisi ut aliquip ex ea commodo consequat. 
-					Duis aute irure dolor in reprehenderit in voluptate velit esse 
-					cillum dolore eu fugiat nulla pariatur.
+					Software engineer with 3 years of experience, including developing a product from the ground up that now serves 10,000 daily active users. My expertise covers  back-end process, database management, and automation testing. Currently, I'm a research assistant working on vision-based neural networks and handling large datasets.
 				</h4> 
 			</div> 
 			<div class="intro-buttons"> 
-				<button class="btn ghost-btn">Get Resume</button> 
+				<a href="https://drive.google.com/file/d/1yy7qo4WMJVb_zVzSrdYtiIk1XsUIzZx5/view?usp=drive_link" target="_blank">
+					<button class="btn ghost-btn">Get Resume</button>
+				</a>
+				 
 			</div> 
+		</div>
+		<div class="about-image"> 
+			<img src="./images/progile.jpg" alt="About Image"> 
 		</div>
 		<div>
 
@@ -89,25 +85,28 @@
 	</section> 
 
 	<!-- About Section -->
-	<section id="about" class="about">
-		<div class="about-text"> 
-			<h3 class="my-heading">About Me</h1>  
-			<p class="lead-para"> 
-				I am Gokul Viswanathan, a software engineer with a 
-				Master's in AI and Robotics and three years of professional 
-				experience. My expertise lies in developing comprehensive 
-				applications, encompassing front-end development, 
-				API management, SQL query optimization, database administration, 
-				and automation testing using RPA. My passion for AI led me to 
-				delve into Machine Learning and Reinforcement Learning concepts 
-				during my academic pursuits. I thrive in collaborative environments 
-				and am adept at independent problem-solving. My enthusiasm for continuous learning drives me to explore diverse fields and expand my knowledge base. 
-			</p> 
-		</div> 
-		<div class="about-image"> 
-			<img src="./images/progile.jpg" alt="About Image"> 
-		</div> 
-	</section> 
+	<!-- <section id="about" class="about">
+		<h2>About Me</h2>
+		<div class="about_box">
+			<div class="about-text">   
+				<p class="lead-para"> 
+					I am Gokul Viswanathan, a software engineer with a 
+					Master's in AI and Robotics and three years of professional 
+					experience. My expertise lies in developing comprehensive 
+					applications, encompassing front-end development, 
+					API management, SQL query optimization, database administration, 
+					and automation testing using RPA. My passion for AI led me to 
+					delve into Machine Learning and Reinforcement Learning concepts 
+					during my academic pursuits. I thrive in collaborative environments 
+					and am adept at independent problem-solving. My enthusiasm for continuous learning drives me to explore diverse fields and expand my knowledge base. 
+				</p> 
+			</div> 
+			<div class="about-image"> 
+				<img src="./images/progile.jpg" alt="About Image"> 
+			</div> 
+		</div>
+		
+	</section>  -->
 
 	<!-- work experience    -->
 	<section class="work" id="work">
@@ -171,16 +170,16 @@
 	
 			</div>
 		</div> 
-
 	</section>
 
 	<!-- Project -->
 	<section class="projects" id="projects"> 
 		<h2 style="text-align: center;">Things I've built</h2> 
-		<ul class="project-list" style="list-style-type: none;">
-			<li>
-				<div class="card">
-					<a style="text-decoration: none;" target="_blank" href="https://medium.com/geekculture/detect-unused-css-or-javascript-in-your-code-8d200ef07e50" >
+
+		<div class="project" style="list-style-type: none;">
+
+			<article class="card">
+					<a target="_blank" href="https://medium.com/geekculture/detect-unused-css-or-javascript-in-your-code-8d200ef07e50" >
 					<header>
 						<h3>Optimizing Reinforcement Learning algorithms</h3> 
 						<div>
@@ -199,126 +198,116 @@
 							<li class="skills">PyTorch</li>
 						</ul>
 					</footer>
-				</div>
-			</li>
+			</article>
+			
+			<article class="card">
+				<a style="text-decoration: none;" target="_blank" href="https://medium.com/geekculture/detect-unused-css-or-javascript-in-your-code-8d200ef07e50" >
+					<header>
+						<h3>Traffic Vehicle image classification </h3> 
+						<div>
+							<p class="small-para"> 
+								Developed and trained a Convolutional Neural Network (CNN) model employing Python and TensorFlow for image
+								classification, achieving high accuracy on the dataset composed of vehicle images.Created a React web page for receiving vehicle images as input and classifying it employing CNN model.
+							</p> 
+						</div>
+					</header>
+					</a>
+					<footer>
+						<ul>
+							<li class="skills">Python</li>
+							<li class="skills">Gymnasium</li>
+							<li class="skills">PyTorch</li>
+						</ul>
+					</footer>
+			</article>
 
-			<li>
-				<div class="card">
-					<a style="text-decoration: none;" target="_blank" href="https://medium.com/geekculture/detect-unused-css-or-javascript-in-your-code-8d200ef07e50" >
-						<header>
-							<h3>Traffic Vehicle image classification </h3> 
-							<div>
-								<p class="small-para"> 
-									Developed and trained a Convolutional Neural Network (CNN) model employing Python and TensorFlow for image
-									classification, achieving high accuracy on the dataset composed of vehicle images.Created a React web page for receiving vehicle images as input and classifying it employing CNN model.
-								</p> 
-							</div>
-						</header>
-						</a>
-						<footer>
-							<ul>
-								<li class="skills">Python</li>
-								<li class="skills">Gymnasium</li>
-								<li class="skills">PyTorch</li>
-							</ul>
-						</footer>
-				</div>
-			</li>
+			<article class="card">
+				<a style="text-decoration: none;" target="_blank" href="https://medium.com/geekculture/detect-unused-css-or-javascript-in-your-code-8d200ef07e50" >
+					<header>
+						<h3>AWS DeepRacer using Proximal Policy Optimization </h3> 
+						<div>
+							<p class="small-para"> 
+								Implemented and fine-tuned Structured DQN, DDQN, and Actor-Critic algorithms with a novel reward structure to achieve consistent top-tier performance, scoring above 90% in demanding environments for Mujoco models and Gym games (Mountain Car and Lunar Lander).	Used the above created Mujoco model and trained it using Actor critic algorithm to replicate given human signing language and was successfully trained to imitate few signing language motions with 90% match to human motion.
+							</p> 
+						</div>
+					</header>
+					</a>
+					<footer>
+						<ul>
+							<li class="skills">Python</li>
+							<li class="skills">Gymnasium</li>
+							<li class="skills">PyTorch</li>
+						</ul>
+					</footer>
+			</article>
 
-			<li>
-				<div>
-					<h3> 
-						AWS DeepRacer using Proximal Policy Optimization
-					</h3> 
-					<p class="small-para"> 
-						Implemented and fine-tuned Structured DQN, DDQN, and Actor-Critic algorithms with a novel reward structure to achieve consistent top-tier performance, 
-						scoring above 90% in demanding environments for Mujoco models and Gym games (Mountain Car and Lunar Lander). 
-						Used the above created Mujoco model and trained it using Actor critic algorithm to replicate given human signing language and was successfully trained to imitate few signing language motions with 90% match to human motion.
-					</p> 
-				</div>
-			</li>
+			<article class="card">
+				<a style="text-decoration: none;" target="_blank" href="https://medium.com/geekculture/detect-unused-css-or-javascript-in-your-code-8d200ef07e50" >
+					<header>
+						<h3>AR-Based Human Face Reconstruction and Cloth Draping  </h3> 
+						<div>
+							<p class="small-para"> 
+								Constructed a 3D face reconstruction model using the PifuHD, converting 2D images into accurate 3D models with an 80% skin tone match. Executed conversion of facial images into full-body renderings, harnessing DrapeNet to attire models in chosen garments, thereby elevating visual allure.
+							</p> 
+						</div>
+					</header>
+					</a>
+					<footer>
+						<ul>
+							<li class="skills">Python</li>
+							<li class="skills">Gymnasium</li>
+							<li class="skills">PyTorch</li>
+						</ul>
+					</footer>
+			</article>
 
-			<li>
-				<div>
-					<h3> 
-						AR-Based Human Face Reconstruction and Cloth Draping 
-					</h3> 
-					<p class="small-para"> 
-						Constructed a 3D face reconstruction model using the PifuHD, converting 2D images into accurate 3D models with an 80% skin tone match. 
-						Executed conversion of facial images into full-body renderings, harnessing DrapeNet to attire models in chosen garments, thereby elevating visual allure.
-					</p> 
-				</div>
-			</li>
-
-			<li>
-				<div>
-					<h3> 
-							Autonomous Navigation Using ROS 
-						</h3> 
-						<p class="small-para"> 
-							Executed ROS programming using A* algorithm to achieve 95% obstacle avoidance and real-time navigation with turtle bots and Husky, employing advanced sensors and Gazebo simulations for enhanced autonomous mobility. 
-							Used the above created Mujoco model and trained it using Actor critic algorithm to replicate given human signing language and was successfully trained to imitate few signing language motions with 90% match to human motion.
-						</p> 
-				</div>
-			</li>
-		</ul>
-
-	</section> 
-
-	<!-- Contact me section -->
-	<section class="contact" id="contact"> 
-		<div class="contact-heading"> 
-			<h1 class="my-heading text-center">Contact Me</h1> 
-		</div> 
-		<div class="contact-content">  
-			<div class="contact-details"> 
-				<h1 class="greet-heading">My Contact Details</h1> 
-				<div class="details"> 
-					<h5 class="contact-heading">EMAIL</h5> 
-					<p class="contact-text">gokulviswanathan25@gmail.com</p> 
-				</div> 
-				<div class="details"> 
-					<h5 class="contact-heading">PHONE</h5> 
-					<p class="contact-text">+1 (716)-844-1082</p> 
-				</div> 
-				<div class="details"> 
-					<h5 class="contact-heading">ADDRESS</h5> 
-					<p class="contact-text">San Francisco, CA</p> 
-					<p>4th Floor8 Lower</p> 
-					<p>San Francisco street, M1 50F</p> 
-				</div> 
-			</div> 
-		</div> 
+			<article class="card">
+				<a style="text-decoration: none;" target="_blank" href="https://medium.com/geekculture/detect-unused-css-or-javascript-in-your-code-8d200ef07e50" >
+					<header>
+						<h3>Autonomous Navigation Using ROS </h3> 
+						<div>
+							<p class="small-para"> 
+								Executed ROS programming using A* algorithm to achieve 95% obstacle avoidance and real-time navigation with turtle bots and Husky, employing advanced sensors and Gazebo simulations for enhanced autonomous mobility.Used the above created Mujoco model and trained it using Actor critic algorithm to replicate given human signing language and was successfully trained to imitate few signing language motions with 90% match to human motion.
+							</p> 
+						</div>
+					</header>
+					</a>
+					<footer>
+						<ul>
+							<li class="skills">Python</li>
+							<li class="skills">Gymnasium</li>
+							<li class="skills">PyTorch</li>
+						</ul>
+					</footer>
+			</article>
+		
+		</div>
+			
 	</section> 
 
 	<!-- Footer section -->
-	<footer class="footer"> 
+	<footer class="footer" id="footer"> 
 		<div class="footer-content text-center"> 
-			<h4> 
-				Copyright © 2023 All rights reserved | 
-				This portfolio website template is created 
-				by GeeksforGeeks. 
-			</h4> 
 			<div class="social-links"> 
 				<div class="footer-menu"> 
 					<ul class="footer-menu-list"> 
 						<li class="footer-list-items"> 
-							<a class="footer-links" href="#"> 
-								<i class="fab fa-facebook-f"></i> 
+							<a class="footer-links" href="mailto: gokulviswanathan25@gmail.com"> 
+								<i class="fa-solid fa-envelope"></i> 
+							</a> 
+						</li>
+						<li class="footer-list-items"> 
+							<a class="footer-links" href="https://github.com/gokul-viswanathan"> 
+								<i class="fa-brands fa-github"></i>
 							</a> 
 						</li> 
 						<li class="footer-list-items"> 
-							<a class="footer-links" href="#"> 
-								<i class="fab fa-twitter"></i> 
+							<a class="footer-links" href="tel:7168441082"> 
+								<i class="fa-solid fa-phone"></i>
 							</a> 
 						</li> 
 						<li class="footer-list-items"> 
-							<a class="footer-links" href="#"> 
-								<i class="fab fa-instagram"></i> 
-							</a> 
-						</li> 
-						<li class="footer-list-items"> 
-							<a class="footer-links" href="#"> 
+							<a class="footer-links" href="https://www.linkedin.com/in/gokul-viswanathan/"> 
 								<i class="fab fa-linkedin-in"></i> 
 							</a> 
 						</li> 

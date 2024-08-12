@@ -1,20 +1,6 @@
 const hamburger = document.getElementById('hamburger'); 
 const menu = document.querySelector('.menu'); 
 
-hamburger.addEventListener('click', function () { 
-	const hamIcon = this.querySelector('.hamburger-icon'); 
-	const crossIcon = this.querySelector('.cross-icon'); 
-	if (hamIcon.style.display === "none") { 
-		hamIcon.style.display = "inline-block"
-		menu.style.display = "none"
-		crossIcon.style.display = "none"
-	} 
-	else { 
-		crossIcon.style.display = "inline-block"
-		hamIcon.style.display = "none"
-		menu.style.display = "block"
-	} 
-});
 
 // navbar scrolling
 
@@ -22,6 +8,7 @@ var didScroll;// on scroll, let the interval function know the user has scrolled
 var lastScrollTop = 0;
 var delta = 8;
 var navbarHeight = $('nav').outerHeight();
+var navbar = document.querySelector('.navbar')
 
 $(window).scroll(function(event){
   didScroll = true;
@@ -36,15 +23,19 @@ setInterval(function() {
 
 function hasScrolled() {
   // do stuff here...
-  var st = $(this).scrollTop();
-  if (Math.abs(lastScrollTop - st) <= delta)
+  var scrollTop = $(this).scrollTop();
+  console.log(lastScrollTop, scrollTop)
+  if (Math.abs(lastScrollTop - scrollTop) <= delta)
     	return;
-  if (st > lastScrollTop && st > navbarHeight){  // Scroll Down
-  	$('nav').removeClass('navbar').addClass('nav-up');} 
+  if (scrollTop > lastScrollTop && scrollTop > navbarHeight){  // Scroll Down
+  	navbar.style.top = '-50px';
+	// navbar.style.position = 'fixed'
+	} 
 	else {  // Scroll Up
-  	  	  $('nav').removeClass('nav-up').addClass('navbar');
+		navbar.style.top = '0';
+		// navbar.style.position = 'static'
 	}
-	lastScrollTop = st;
+	lastScrollTop = scrollTop;
 }
 	
 var UB = document.getElementById("UB")
@@ -56,16 +47,16 @@ function butonClick(val){
 		$(UB).removeClass("UB-hide").addClass("UB-show");
 		$(SE).removeClass("SE-show").addClass("SE-hide");
 		$(ASE).removeClass("ASE-show").addClass("ASE-hide");
-		// console.log("UB")
+		console.log("UB")
 	} else if(val == "SE"){
 		$(SE).removeClass("SE-hide").addClass("SE-show");
 		$(UB).removeClass("UB-show").addClass("UB-hide");
 		$(ASE).removeClass("ASE-show").addClass("ASE-hide");
-		// console.log("SE")
+		console.log("SE")
 	} else {
 		$(ASE).removeClass("ASE-hide").addClass("ASE-show");
 		$(UB).removeClass("UB-show").addClass("UB-hide");
 		$(SE).removeClass("SE-show").addClass("SE-hide");
-		// console.log("ASE")
+		console.log("ASE")
 	}
 }

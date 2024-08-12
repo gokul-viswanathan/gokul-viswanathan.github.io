@@ -1,34 +1,32 @@
 /* Styles defined for the desktop or the bigger screen devices*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); 
 
-body { 
-	margin: 0; 
-	padding: 0; 
+body {
 	box-sizing: border-box; 
 	font-family: 'Poppins', sans-serif; 
-  /* background-image:  */
   	background-color: #1F2833;
   	color: #DEF2F1;
 } 
-
- /* we'll add this class using javascript */
-.nav-up {
-  top: -40px; 
-  transition: top 0.2s ease-in-out;
-  /* // same as header height. use variables in LESS/SASS */
+section {
+	margin: 10rem 10rem 10rem 10rem;
 }
+
+/* --------Navbar-------- */
 
 .navbar { 
 	display: flex; 
 	align-items: center; 
 	justify-content: space-between; 
-	position: fixed; 
-	/* top: 0;  */
 	width: 100%; 
-  transition: all 0.2s ease-in-out;
-	/* background-image: linear-gradient(90deg, #123c69, #53C8B6, #35A99C);  */
-	/* background-color: transparent;  */
+	top: 0;
+	position: static;
+
 } 
+
+ /* we'll add this class using javascript */
+ /* .nav-up {
+	transition: top 0.2s ease-in-out;
+  } */
 
 .logo { 
 	padding: 0 5rem; 
@@ -42,16 +40,6 @@ body {
 	padding: 0 5rem; 
 } 
 
-.hamburger { 
-	display: none; 
-	color: #fff; 
-	font-size: 25px; 
-} 
-
-.cross-icon { 
-	display: none; 
-} 
-
 .menu .menu-list { 
 	display: flex; 
 	list-style: none; 
@@ -61,25 +49,24 @@ body {
 	padding: 0.5rem 1rem; 
 } 
 
-@media screen and (min-width: 856px) and (max-width: 1024px) { 
+/* @media screen and (min-width: 856px) and (max-width: 1024px) { 
 	.menu-list .menu-list-items { 
 		padding: 0.5rem 0.3rem; 
 	} 
-} 
+}  */
 
 /* Main Hero Section Styles */
+
 .hero { 
-	background-size: 100% 100%; 
-	width: 100%; 
-	height: 100vh; 
+	/* width: 100%; */
 	display: flex; 
 	align-items: center; 
 	justify-content: start; 
-	margin: 0 0; 
 } 
 
 .hero .intro { 
-	margin: 10rem 10rem; 
+	/* margin: 10rem 10rem;  */
+	padding: 0;
 } 
 
 .hero .intro-buttons { 
@@ -95,23 +82,29 @@ body {
 	display: flex; 
 	align-items: center; 
 	justify-content: space-between; 
-	width: 100%; 
-  background-size: 100% 100%; 
+	padding: 0 0 0 10rem;
+	/* width: 100%;  */
+  	/* background-size: 100% 100%; 
 	height: 100vh; 
-  padding: 100px;
+  	padding: 100px; */
 } 
+
 
 .about .about-text { 
-	width: 450px; 
+	width: 50%; 
 	color: #fff; 
-	padding: 5rem 1rem 5rem 5rem; 
+	/* padding: 5rem 1rem 5rem 5rem;  */
 } 
 
-.about .about-image img { 
-	height: 400px; 
-	width: 300px; 
+/* .hero.about-image{
+	width: 50%;
+} */
+.hero .about-image img { 
+	height: auto; 
+	max-width: 300px; 
+	align-items: center;
 	padding: 5rem 5rem 5rem 5rem; 
-  margin: 10rem 10rem;
+  	/* margin: 10rem 10rem; */
 } 
 
 
@@ -119,7 +112,6 @@ body {
  experience section  */
 
  .work {
-	margin: 0 10rem 10rem 20rem;
 	padding: 0;
   }
    #work .duration {
@@ -148,8 +140,7 @@ body {
 	  color: #DEF2F1;
 	  font-size: medium;
 	  cursor: pointer;
-	  margin: 1rem;
-	  margin: 1rem;
+	  /* margin: 1rem; */
   }
   
   .work_title .title:hover{
@@ -185,23 +176,30 @@ body {
 /* Projects */
 
 .projects{
-	margin: 0 10rem 10rem 10rem;
 	padding: 0;
   }
 
+.project{
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+	grid-gap: 20px;
+}
+
+.card a {
+	text-decoration: none;
+}
+
 .card {
-	/* Add shadows to create the "card" effect  */
+	flex: 1;
+	min-width: 250px;
+	max-width: 100%;
+	background-color: #45A29E;
 	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-	/* transition: 0.3s; */
-	width: 25%;
-	border-radius: 3px;
-	background-color: #8892b0;
-	padding: 1rem; 
-	border-radius: 25px;
-	margin: 0.5rem;
-	box-sizing: border-box;
+	padding: 20px;
+	border-radius: 15px;
+	box-sizing: border-box; 
 	display: flex;
-	flex-flow: row wrap;
+	flex-direction: column;
   }
   
  /* On mouse-over, add a deeper shadow */
@@ -214,89 +212,73 @@ body {
 	padding: 10px 20px 30px 0; 
 }
 
-/* Contact section styles */
-.contact { 
-	padding: 0 5rem; 
-} 
-
-.contact-content { 
-	display: flex; 
-	margin: 3rem 0; 
-	justify-content: space-between; 
-} 
-
-.contact-details { 
-	width: 50%; 
-} 
-
 /* Footer Styles */
 .footer { 
 	color: #fff; 
 	padding: 2rem; 
 } 
 
+.footer-menu .footer-menu-list { 
+	display: flex; 
+	list-style: none; 
+}
+
 .footer-list-items { 
 	display: flex; 
 	align-items: center; 
-	justify-content: center; 
-	height: 50px; 
-	width: 50px; 
-	margin: 1rem 1rem 0 1rem; 
-	border-radius: 50%; 
+	height: 60px; 
+	width: 60px; 
 	background-color: #53C8B6; 
+	border-radius: 50%;
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+
+
 } 
 
 .footer-links { 
 	font-size: 24px; 
 	color: #fff; 
 	text-decoration: none; 
+	padding-left: 18px;
 } 
 
-.social-links { 
-	display: flex; 
-	align-items: center; 
-	justify-content: center; 
-} 
-
-.footer-menu { 
-	padding: 0 5rem; 
-} 
-
-.footer-menu .footer-menu-list { 
-	display: flex; 
-	list-style: none; 
-} 
+ 
 
 
 /* utility classes */
 
 .greet-heading { 
 	font-size: 2rem; 
+	margin: 0;
 	font-weight: lighter; 
-	margin: 0 0 0 0; 
 	letter-spacing: 1px; 
   	color: #45A29E;
 } 
 
 .my-heading { 
 	font-size: 4rem; 
-	margin: 0; 
-  color: #AAABB8;
-  font-family: sans-serif;
+	margin: 0;
+  	color: #AAABB8;
+  	font-family: sans-serif;
 } 
 
 .my-sub-heading { 
-	font-size: 2.5rem; 
-	margin: 0 0 0 0; 
-  color: #45A29E;
-  font-family: sans-serif;
+	font-size: 2.5rem;  
+  	color: #45A29E; 
+  	font-family: sans-serif;
+	margin: 0;
 }
 
 .sub-heading { 
-	margin: 0 14rem 0 0; 
-	font-size: 1.5 rem; 
+	font-size: 1rem; 
 	color: #DEF2F1;
 	font-weight: lighter; 
+	margin: 0;
+	padding: 0 5rem 0 0;
 } 
 
 .links:hover { 
