@@ -60,3 +60,7 @@ function butonClick(val){
 		console.log("ASE")
 	}
 }
+
+function toggleMenu() {
+    document.querySelector(".menu").classList.toggle("show");
+}
