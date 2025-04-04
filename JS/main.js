@@ -1,3 +1,4 @@
+
 const hamburger = document.getElementById('hamburger'); 
 const menu = document.querySelector('.menu'); 
 
@@ -7,7 +8,9 @@ const menu = document.querySelector('.menu');
 var didScroll;// on scroll, let the interval function know the user has scrolled
 var lastScrollTop = 0;
 var delta = 8;
-var navbarHeight = $('nav').outerHeight();
+// var navbarHeight = $('nav').outerHeight();
+var navbarHeight = document.querySelector("nav").offsetHeight;
+// console.log(navbarHeight);
 var navbar = document.querySelector('.navbar')
 
 $(window).scroll(function(event){
@@ -24,7 +27,7 @@ setInterval(function() {
 function hasScrolled() {
   // do stuff here...
   var scrollTop = $(this).scrollTop();
-  console.log(lastScrollTop, scrollTop)
+//   console.log(lastScrollTop, scrollTop)
   if (Math.abs(lastScrollTop - scrollTop) <= delta)
     	return;
   if (scrollTop > lastScrollTop && scrollTop > navbarHeight){  // Scroll Down
@@ -37,30 +40,9 @@ function hasScrolled() {
 	}
 	lastScrollTop = scrollTop;
 }
-	
-var UB = document.getElementById("UB")
-var SE = document.getElementById("SE")
-var ASE = document.getElementById("ASE")
-
-function butonClick(val){
-	if (val == "UB"){
-		$(UB).removeClass("UB-hide").addClass("UB-show");
-		$(SE).removeClass("SE-show").addClass("SE-hide");
-		$(ASE).removeClass("ASE-show").addClass("ASE-hide");
-		console.log("UB")
-	} else if(val == "SE"){
-		$(SE).removeClass("SE-hide").addClass("SE-show");
-		$(UB).removeClass("UB-show").addClass("UB-hide");
-		$(ASE).removeClass("ASE-show").addClass("ASE-hide");
-		console.log("SE")
-	} else {
-		$(ASE).removeClass("ASE-hide").addClass("ASE-show");
-		$(UB).removeClass("UB-show").addClass("UB-hide");
-		$(SE).removeClass("SE-show").addClass("SE-hide");
-		console.log("ASE")
-	}
-}
 
 function toggleMenu() {
     document.querySelector(".menu").classList.toggle("show");
 }
+
+
