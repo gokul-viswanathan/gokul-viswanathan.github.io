@@ -182,17 +182,9 @@ section {
 
 .workData {
 	display: none;
-	/* Hide all divs by default */
-	/* padding: 20px;
-	margin: 10px;
-	border: 1px solid #ccc; */
 }
 
 /* Projects */
-
-.projects {
-	padding: 0;
-}
 
 .project {
 	display: grid;
@@ -202,6 +194,13 @@ section {
 
 .card a {
 	text-decoration: none;
+	color: #fff;
+}
+
+.card-content{
+	overflow-y: auto;
+	color: #fff;
+	max-height: 20rem;
 }
 
 .card {
