@@ -1,18 +1,20 @@
 /* Styles defined for the desktop or the bigger screen devices*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-:root{
+:root {
 	--section-height: 100vh;
 }
+
 html {
 	scroll-behavior: smooth;
 }
 
 @media (max-width: 768px) {
 	html {
-	  font-size: 14px; /* Adjust font size for smaller screens */
+		font-size: 14px;
+		/* Adjust font size for smaller screens */
 	}
-  }
+}
 
 body {
 	box-sizing: border-box;
@@ -28,16 +30,18 @@ section {
 
 @media screen and (max-width: 1024px) {
 	section {
-	  padding: 0 5rem; /* Reduce padding for tablets */
+		padding: 0 5rem;
+		/* Reduce padding for tablets */
 	}
-  }
-  
-  @media screen and (max-width: 768px) {
+}
+
+@media screen and (max-width: 768px) {
 	section {
-	  padding: 0 2rem; /* Reduce padding further for mobile */
+		padding: 0 2rem;
+		/* Reduce padding further for mobile */
 	}
-  }
-  
+}
+
 
 /* --------Navbar-------- */
 
@@ -60,16 +64,18 @@ section {
 
 @media (max-width: 600px) {
 	.logo-heading {
-	  display: none; /* Hide the original text */
+		display: none;
+		/* Hide the original text */
 	}
-  
+
 	.logo::after {
-	  content: "GV"; /* Display the shortened version */
-	  font-size: 32px;
-	  font-weight: bold;
-	  padding: 0;
+		content: "GV";
+		/* Display the shortened version */
+		font-size: 32px;
+		font-weight: bold;
+		padding: 0;
 	}
-  }
+}
 
 .menu {
 	padding: 0 5rem;
@@ -177,13 +183,13 @@ section {
 	}
 }
 
-.tech-menu-list{
+.tech-menu-list {
 	display: flex;
 	padding-left: 0;
 	/* list-style: none; */
 }
 
-.tech-list-items{
+.tech-list-items {
 	font-size: 2.5rem;
 	display: flex;
 	margin-right: 3rem;
@@ -226,6 +232,7 @@ section {
 	background-color: transparent;
 	color: #DEF2F1;
 }
+
 .selected_work_title {
 	background-color: #74D7BB;
 	color: black;
@@ -299,7 +306,7 @@ section {
 .footer {
 	color: #fff;
 	padding: 5rem 20rem 2rem;
-	display:flex;
+	display: flex;
 	justify-content: center;
 }
 
@@ -325,6 +332,34 @@ section {
 	padding-left: 18px;
 }
 
+
+.footer-phone-tooltip {
+	position: relative;
+	display: inline-block;
+}
+
+.footer-phone-tooltip .tooltip-text {
+	visibility: hidden;
+	width: 10rem;
+	background-color: #333;
+	color: #fff;
+	text-align: center;
+	border-radius: 1rem;
+	padding: 1rem;
+	position: absolute;
+	z-index: 1;
+	bottom: 125%;
+	/* Position above icon */
+	left: 50%;
+	transform: translateX(-50%);
+	opacity: 0;
+	transition: opacity 0.3s;
+}
+
+.footer-phone-tooltip:hover .tooltip-text {
+	visibility: visible;
+	opacity: 1;
+}
 
 
 
@@ -381,6 +416,7 @@ section {
 }
 
 .ghost-btn {
+	font-size: medium;
 	background-color: #fff;
 	color: #35A99C;
 	border: 2px solid #35A99C;
