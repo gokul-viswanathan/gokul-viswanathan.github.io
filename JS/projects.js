@@ -10,14 +10,14 @@ const projectDatas = [
         "projectName": "LeanFrame: Efficient Video for ML",
         "projectContent": "Trimmed the fat off video data—built a smart frame filter that sniffs out and drops redundant frames, making machine learning pipelines leaner and faster.",
         "techStack": ["Python", "OpenCV", "Numpy"],
-        "projectLink" : "https://github.com/gokul-viswanathan",
+        "projectLink" : "https://github.com/gokul-viswanathan/LeanFrame",
         "show": "1"
     },
     {
         "projectName": "Wishlist Price Monitor",
         "projectContent": "Built a price-tracking browser buddy that watches your wishlist like a hawk—no more site-hopping or falling for flashy recommendations. Just click, check, and chill till the price is right.",
         "techStack": ["Javascript", "React"],
-        "projectLink" : "https://github.com/gokul-viswanathan",
+        "projectLink" : "https://github.com/gokul-viswanathan/product_cost",
         "show": "1"
     },
     {
