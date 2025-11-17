@@ -1,176 +1,203 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gokul Viswanathan</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="CSS/main.css" />
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-ZWY2VSLLVC"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Gokul Viswanathan</title>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-		integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-		crossorigin="anonymous" referrerpolicy="no-referrer" />
-	<link rel="stylesheet" href="CSS/main.css">
-	<!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZWY2VSLLVC"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() { dataLayer.push(arguments); }
-		gtag('js', new Date());
+      gtag("config", "G-ZWY2VSLLVC"); // Replace with your actual ID
+    </script>
+  </head>
 
-		gtag('config', 'G-ZWY2VSLLVC'); // Replace with your actual ID
-	</script>
-</head>
+  <body>
+    <!-- Navbar header section -->
+    <header class="header">
+      <nav class="navbar">
+        <div class="logo">
+          <h2 class="logo-heading">Gokul Viswanathan</h2>
+        </div>
+        <div class="menu">
+          <ul class="menu-list">
+            <li class="menu-list-items">
+              <a class="links" href="#home"> Home </a>
+            </li>
+            <li class="menu-list-items">
+              <a class="links" href="#work"> Experience </a>
+            </li>
+            <li class="menu-list-items">
+              <a class="links" href="#projects"> Projects </a>
+            </li>
+            <li class="menu-list-items">
+              <a class="links" href="#blog"> Blog </a>
+            </li>
+            <li class="menu-list-items">
+              <a class="links" href="#footer"> Contact Me </a>
+            </li>
+          </ul>
+        </div>
+        <!-- Hamburger Icon -->
+        <div class="hamburger-menu" onclick="toggleMenu()">&#9776;</div>
+      </nav>
+    </header>
 
-<body>
-	<!-- Navbar header section -->
-	<header class="header">
-		<nav class="navbar">
-			<div class="logo">
-				<h2 class="logo-heading">Gokul Viswanathan</h2>
-			</div>
-			<div class="menu">
-				<ul class="menu-list">
-					<li class="menu-list-items">
-						<a class="links" href="#home">
-							Home
-						</a>
-					</li>
-					<li class="menu-list-items">
-						<a class="links" href="#work">
-							Experience
-						</a>
-					</li>
-					<li class="menu-list-items">
-						<a class="links" href="#projects">
-							Projects
-						</a>
-					</li>
-					<li class="menu-list-items">
-						<a class="links" href="#footer">
-							Contact Me
-						</a>
-					</li>
-				</ul>
-			</div>
-			<!-- Hamburger Icon -->
-			<div class="hamburger-menu" onclick="toggleMenu()">
-				&#9776;
-			</div>
-		</nav>
-	</header>
-
-	<!-- Main hero banner -->
-	<section id="home" class="hero">
-		<div class="intro">
-			<div class="headings">
-				<h3 class="greet-heading">Hello, I'm</h3>
-				<h1 class="my-heading">Gokul Viswanathan</h1>
-				<h4 class="sub-heading">
-					I build applications that are fast, scalable, and (hopefully) don’t wake anyone up at 2 a.m. for bug
-					fixes.
-					Big fan of solving tricky problems and turning ideas into products.
-				</h4>
-			</div>
+    <!-- Main hero banner -->
+    <section id="home" class="hero">
+      <div class="intro">
+        <div class="headings">
+          <h3 class="greet-heading">Hello, I'm</h3>
+          <h1 class="my-heading">Gokul Viswanathan</h1>
+          <h4 class="sub-heading">
+            I build applications that are fast, scalable, and (hopefully) don’t
+            wake anyone up at 2 a.m. for bug fixes. Big fan of solving tricky
+            problems and turning ideas into products.
+          </h4>
+        </div>
 			<div class="intro-buttons">
-				<a href="https://drive.google.com/file/d/1ilapASCUr8ZOeSlj23Z4rH80a22rYDx2/view?usp=sharing"
+				<a href="https://gokul-viswanathan.github.io/Gokul_Viswanathan.pdf"
 					target="_blank">
 					<button class="btn ghost-btn">Get Resume</button>
 				</a>
 			</div>
-			<div class="tech-menu">
-				<ul class="tech-menu-list">
-					<li class="tech-list-items">
-						<i class="fa-brands fa-python"></i>
-					</li>
-					<li class="tech-list-items">
-						<i class="fa-brands fa-java"></i>
-					</li>
-					<li class="tech-list-items">
-						<i class="fa-brands fa-square-js"></i>
-					</li>
-					<li class="tech-list-items">
-						<i class="fa-brands fa-docker"></i>
-					</li>
-					<li class="tech-list-items">
-						<i class="fa-brands fa-node"></i>
-					</li>
-					<li class="tech-list-items">
-						<i class="fa-brands fa-react"></i>
-					</li>
-					<li class="tech-list-items">
-						<i class="fa-solid fa-database"></i>
-					</li>
-					<li class="tech-list-items">
-						<i class="fa-brands fa-aws"></i>
-					</li>
-				</ul>
-			</div>
-		</div>
-		<div class="hero-image">
-			<img src="./images/progile.jpg" alt="Hero Image">
-		</div>
-	</section>
+        <div class="tech-menu">
+          <ul class="tech-menu-list">
+            <li class="tech-list-items">
+              <i class="fa-brands fa-python"></i>
+            </li>
+            <li class="tech-list-items">
+              <i class="fa-brands fa-java"></i>
+            </li>
+            <li class="tech-list-items">
+              <i class="fa-brands fa-square-js"></i>
+            </li>
+            <li class="tech-list-items">
+              <i class="fa-brands fa-docker"></i>
+            </li>
+            <li class="tech-list-items">
+              <i class="fa-brands fa-node"></i>
+            </li>
+            <li class="tech-list-items">
+              <i class="fa-brands fa-react"></i>
+            </li>
+            <li class="tech-list-items">
+              <i class="fa-solid fa-database"></i>
+            </li>
+            <li class="tech-list-items">
+              <i class="fa-brands fa-aws"></i>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div id="avatar-container"></div>
+      </div>
+    </section>
 
-	<!-- work experience    -->
-	<section class="work" id="work">
-		<h1>Where I've worked</h1>
-		<div class="work_box">
-			<!-- buttons -->
-			<div class="work_title"></div>
-			<!-- details -->
-			<h2>worked as</h2>
-			<div class="work_details"></div>
-		</div>
-	</section>
+    <!-- work experience    -->
+    <section class="work" id="work">
+      <h1>Professional Experience</h1>
+      <div class="work_box">
+        <!-- buttons -->
+        <div class="work_title"></div>
+        <!-- details -->
+        <div class="work_details"></div>
+      </div>
+    </section>
 
-	<!-- Project -->
-	<section class="projects" id="projects">
-		<h1 style="text-align: center;">Things I've built</h1>
-		<div class="project" style="list-style-type: none;"></div>
-	</section>
+    <!-- Project -->
+    <section class="projects" id="projects">
+      <h1 style="text-align: center">Featured Projects</h1>
+      <div class="project" style="list-style-type: none"></div>
+    </section>
 
-	<!-- Footer section -->
-	<footer class="footer" id="footer">
-		<div class="footer-menu">
-			<ul class="footer-menu-list">
-				<li class="footer-list-items">
-					<a class="footer-links" target="_blank" href="mailto:gokulviswanathan25@gmail.com">
-						<i class="fa-solid fa-envelope"></i>
-					</a>
-				</li>
-				<li class="footer-list-items">
-					<a class="footer-links" target="_blank" href="https://github.com/gokul-viswanathan">
-						<i class="fa-brands fa-github"></i>
-					</a>
-				</li>
-				<li class="footer-list-items">
-					<div class="footer-phone-tooltip">
-						<i class="fa-solid fa-phone footer-links"></i>
-						<span class="tooltip-text">+1 (716) 844-1082</span>
-					</div>
-				</li>
-				<li class="footer-list-items">
-					<a class="footer-links" target="_blank" href="https://www.linkedin.com/in/gokul-viswanathan/">
-						<i class="fab fa-linkedin-in"></i>
-					</a>
-				</li>
-				<li class="footer-list-items">
-					<a class="footer-links" target="_blank" href="https://x.com/gokul_2509">
-						<i class="fa-brands fa-x-twitter"></i>
-					</a>
-				</li>
-			</ul>
-		</div>
-	</footer>
+    <!-- Blog -->
+    <section class="blog" id="blog">
+      <h1 style="text-align: center">Technical Blog</h1>
+      <div class="blog-posts" style="list-style-type: none"></div>
+    </section>
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"
-		integrity="sha512-uKQ39gEGiyUJl4AI6L+ekBdGKpGw4xJ55+xyJG7YFlJokPNYegn9KwQ3P8A7aFQAUtUsAQHep+d/lrGqrbPIDQ=="
-		crossorigin="anonymous" referrerpolicy="no-referrer">
-		</script>
-	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-	<script src="JS/workExp.js"></script>
-	<script src="JS/projects.js"></script>
-	<script src="JS/main.js"></script>
+    <!-- Footer section -->
+    <footer class="footer" id="footer">
+      <div class="footer-menu">
+        <ul class="footer-menu-list">
+          <li class="footer-list-items">
+            <a
+              class="footer-links"
+              target="_blank"
+              href="mailto:gokulviswanathan25@gmail.com"
+            >
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+          </li>
+          <li class="footer-list-items">
+            <a
+              class="footer-links"
+              target="_blank"
+              href="https://github.com/gokul-viswanathan"
+            >
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </li>
+          <li class="footer-list-items">
+            <div class="footer-phone-tooltip">
+              <i class="fa-solid fa-phone footer-links"></i>
+              <span class="tooltip-text">+1 (716) 844-1082</span>
+            </div>
+          </li>
+          <li class="footer-list-items">
+            <a
+              class="footer-links"
+              target="_blank"
+              href="https://www.linkedin.com/in/gokul-viswanathan/"
+            >
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </li>
+          <li class="footer-list-items">
+            <a
+              class="footer-links"
+              target="_blank"
+              href="https://x.com/gokul_2509"
+            >
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
 
-</body>
-
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"
+      integrity="sha512-uKQ39gEGiyUJl4AI6L+ekBdGKpGw4xJ55+xyJG7YFlJokPNYegn9KwQ3P8A7aFQAUtUsAQHep+d/lrGqrbPIDQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="JS/avatar.js"></script>
+    <script src="JS/workExp.js"></script>
+    <script src="JS/projects.js"></script>
+    <script src="JS/blog.js"></script>
+    <script src="JS/main.js"></script>
+  </body>
 </html>
+

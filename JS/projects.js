@@ -1,5 +1,12 @@
 const projectDatas = [
     {
+        "projectName": "Anonymask",
+        "projectContent": "Secure anonymization/de-anonymization library for protecting Personally Identifiable Information (PII) before sending data to Large Language Models (LLMs). Built with Rust for performance and safety, with bindings for Python and Node.js. Features comprehensive entity detection, deterministic UUID-based placeholders, and zero-copy deanonymization.",
+        "techStack": ["Rust", "Python", "Node.js", "PyO3", "NAPI-RS"],
+        "projectLink" : "https://github.com/gokul-viswanathan/anonymask",
+        "show": "1"
+    },
+    {
         "projectName": "Thought Ink",
         "projectContent": "A lightweight, privacy-focused note-taking app with built-in AI assistance. Designed as a learning project, Thought Ink helps you take structured notes (with headings, bullet points, etc.), store them locally in your browser, and ask AI questions based on your content – all without sending your data to any server.",
         "techStack": ["Typescript", "React.Js", "Node.Js", "Quill.Js", "Git"],
@@ -46,44 +53,47 @@ const projectDatas = [
 
 function projects() {
     const projectDiv = document.querySelector(".project");
+    let projectIndex = 1;
 
     for (const data of projectDatas) {
         if (data.show === "1") {
             const projectArticles = document.createElement("article");
             projectArticles.classList.add("card");
 
-            const projectHeader = document.createElement("header");
-            projectHeader.classList.add("card-header");
+
             const projectLink = document.createElement("a");
             projectLink.target = "_blank";
             projectLink.href = data.projectLink;
+
+            const projectHeader = document.createElement("header");
+            projectHeader.classList.add("card-header");
             const projectHeaderTag = document.createElement("h3");
             projectHeaderTag.textContent = data.projectName;
-            projectLink.appendChild(projectHeaderTag);
-            projectHeader.appendChild(projectLink);
-            projectArticles.appendChild(projectHeader);
+            projectHeader.appendChild(projectHeaderTag);
+            projectLink.appendChild(projectHeader);
 
             const projectContent = document.createElement("div");
             projectContent.classList.add("card-content");
             const projectContentTag = document.createElement("p");
             projectContentTag.textContent = data.projectContent;
             projectContent.appendChild(projectContentTag);
-            projectArticles.appendChild(projectContent);
 
             const projectFooter = document.createElement("footer");
             projectFooter.classList.add("card-footer");
-            const projectFooterTag = document.createElement("ul");
             for (const skill of data.techStack) {
-                const skillListItem = document.createElement("li");
-                skillListItem.classList.add("skills");
-                skillListItem.textContent = skill;
-                projectFooterTag.appendChild(skillListItem);
+                const skillSpan = document.createElement("span");
+                skillSpan.classList.add("skills");
+                skillSpan.textContent = skill;
+                projectFooter.appendChild(skillSpan);
             }
-            projectFooter.appendChild(projectFooterTag)
-            projectArticles.appendChild(projectFooter);
-            projectDiv.appendChild(projectArticles);
-        }
 
+            projectLink.appendChild(projectContent);
+            projectLink.appendChild(projectFooter);
+            projectArticles.appendChild(projectLink);
+            projectDiv.appendChild(projectArticles);
+            
+            projectIndex++;
+        }
     }
 }
 projects();

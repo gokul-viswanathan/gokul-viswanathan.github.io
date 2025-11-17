@@ -1,16 +1,17 @@
 const datas = [
     {
         "Title": "Software Engineer",
-        "Id": "pattonLabs ",
-        "Company": "Patton Labs ",
+        "Id": "pattonLabs",
+        "Company": "Patton Labs",
         "StartDate": "Nov 2024",
         "endDate": "current",
         "active": "1",
-        "contents": ["Contributed to the migration of a monolithic application to a microservices-based architecture, enhancing scalability, maintainability, and deployment flexibility.",
-            "Resolved API performance bottlenecks through extensive stress and load testing, increasing throughput by 40%.",
-            "Optimized complex SQL queries and applied effective indexing and caching strategies, resulting in a 65% reduction in average query execution time.",
-            "Collaborated with a cross-functional team including frontend developers, QA, and DevOps to ensure smooth migration",
-            "Orchestrated CI/CD pipeline using GitHub Actions, implemented testing and lint checks to streamline deployment.",
+        "contents": [
+            "Led migration of monolithic application to microservices architecture, enhancing scalability, maintainability, and deployment flexibility across distributed systems.",
+            "Resolved critical API performance bottlenecks through comprehensive stress testing and load analysis, achieving 40% throughput improvement and reducing response times by 60%.",
+            "Optimized complex SQL queries and implemented advanced indexing with Redis caching strategies, resulting in 65% reduction in average query execution time and improved database performance.",
+            "Collaborated with cross-functional teams including frontend developers, QA engineers, and DevOps to ensure seamless migration and maintain system reliability.",
+            "Orchestrated end-to-end CI/CD pipeline using GitHub Actions, implementing automated testing, code quality checks, and streamlined deployment processes."
         ]
     },
 
@@ -21,10 +22,11 @@ const datas = [
         "StartDate": "Mar 2024",
         "endDate": "Oct 2024",
         "active": "1",
-        "contents": ["Pre-funded fintech platform focusing on transaction analysis and cost control methods.",
-            "Built secure transaction integration system using Plaid API with Google OAuth authentication and implemented connection pooling for optimized database performance.",
-            "Engineered real-time transaction monitoring system for recurring transactions and subscription with Redis caching, reducing latency and optimized financial tracking across biweekly and monthly expenses.",
-            "Designed and implemented a secure multi-user account linking and validation process, enabling users to consolidate and view multiple account transactions seamlessly.",
+        "contents": [
+            "Developed pre-funded fintech platform focusing on intelligent transaction analysis and proactive cost control methods for personal finance management.",
+            "Built secure transaction integration system using Plaid API with Google OAuth authentication, implementing connection pooling for optimized database performance and handling 10K+ daily transactions.",
+            "Engineered real-time transaction monitoring system for recurring transactions and subscription management with Redis caching, reducing latency by 70% and optimizing financial tracking across biweekly and monthly expense cycles.",
+            "Designed and implemented secure multi-user account linking and validation process, enabling users to consolidate and view multiple account transactions seamlessly with bank-level security protocols."
         ]
     },
 
@@ -35,12 +37,13 @@ const datas = [
         "StartDate": "Jun 2019",
         "endDate": "Jul 2022",
         "active": "1",
-        "contents": ["An enterprise-scale COVID site and employee management platform using Java, TypeScript, and AWS, handling 50K+ daily Active Users across 300+ office locations with 99.9% uptime.",
+        "contents": [
+            "Architected and deployed enterprise-scale COVID site and employee management platform using Java, TypeScript, and AWS, handling 50K+ daily active users across 300+ office locations with 99.9% uptime.",
             "Optimized automated approval workflow system reducing processing time from 24 hours to 10 minutes, resulting in 85% improvement in employee satisfaction and 40% reduction in administrative overhead.",
-            "Automated real-time contact tracing microservice that processed 5K+ daily proximity events, successfully identifying and notifying 1,000+ potential exposure cases within 15 minutes of confirmed cases.",
-            "Upgraded vaccination tracking service with secure document management using AWS S3 and role-based access control.",
-            "Enhanced suite of 20+ RESTful APIs, handling 100K+ daily requests with optimized performance.",
-            "Modernized analytics dashboard using TypeScript and D3.js, providing real-time visualization of office capacity."
+            "Automated real-time contact tracing microservice processing 5K+ daily proximity events, successfully identifying and notifying 1,000+ potential exposure cases within 15 minutes of confirmed cases.",
+            "Upgraded vaccination tracking service with secure document management using AWS S3 and role-based access control for HIPAA compliance.",
+            "Enhanced suite of 20+ RESTful APIs handling 100K+ daily requests with optimized performance and comprehensive error handling.",
+            "Modernized analytics dashboard using TypeScript and D3.js, providing real-time visualization of office capacity and utilization metrics."
         ]
     }
 ]
@@ -60,61 +63,100 @@ function viewBloack(value){
     } )
 
     show_work.style.display = "block";
+    show_work.classList.add("active");
     current_title.classList.add("selected_work_title");
     current_title.classList.remove("unselected_work_title")
 }
 
 function workExp() {
-
+    console.log("workExp() function called");
     const work_title = document.querySelector(".work_title");
-    const p_tag = document.createElement("p");
     const work_details = document.querySelector(".work_details");
+    
+    console.log("work_title:", work_title);
+    console.log("work_details:", work_details);
+    
+    if (!work_title || !work_details) {
+        console.error("Work elements not found!");
+        return;
+    }
+    
+    // Clear existing content to prevent duplicates
+    work_title.innerHTML = '';
+    work_details.innerHTML = '';
+    
     let currentFile = null;
 
     for (const data of datas) {
         if (data.active == "1") {
+            // Create company button
             const button = document.createElement("button");
             button.textContent = data.Company;
             const workId = data.Id;
             button.id = workId;
-            button.classList.add("title");
-            button.addEventListener("click", () => {viewBloack(workId)});
-            p_tag.appendChild(button);
+            button.classList.add("title", "unselected_work_title");
+            button.addEventListener("click", () => {
+                viewBloack(workId);
+            });
+            work_title.appendChild(button);
 
+            // Create work content with new structure
             const workContent = document.createElement("div");
-            workContent.id = "work"+workId;
+            workContent.id = "work" + workId;
             workContent.classList.add("workData");
+
+            // Create content wrapper
+            const contentWrapper = document.createElement("div");
+            contentWrapper.classList.add("workData-content");
+
+            // Create header section
+            const headerSection = document.createElement("div");
+            headerSection.classList.add("workData-header");
 
             const company = document.createElement("h4");
             company.textContent = data.Title;
-            workContent.appendChild(company);
+            headerSection.appendChild(company);
 
             const duration = document.createElement("p");
             duration.classList.add("duration");
             duration.textContent = data.StartDate + " - " + data.endDate;
-            workContent.appendChild(duration);
+            headerSection.appendChild(duration);
 
+            contentWrapper.appendChild(headerSection);
+
+            // Add achievements list
             if (data.contents && Array.isArray(data.contents)) {
                 const unOrderList = document.createElement("ul");
-                data.contents.forEach(point => {
+                data.contents.forEach((point) => {
                     const listItem = document.createElement("li");
                     listItem.textContent = point;
                     unOrderList.appendChild(listItem);
-                })
-                workContent.appendChild(unOrderList);
+                });
+                contentWrapper.appendChild(unOrderList);
             } else {
                 const noContentMessage = document.createElement("p");
                 noContentMessage.textContent = "No details available.";
-                workContent.appendChild(noContentMessage);
+                noContentMessage.style.color = "var(--text-muted)";
+                contentWrapper.appendChild(noContentMessage);
             }
-            work_details.appendChild(workContent)
 
-            if (data.endDate === "current"){
+            workContent.appendChild(contentWrapper);
+            work_details.appendChild(workContent);
+
+            if (data.endDate === "current") {
                 currentFile = workId;
             }
         }
-        work_title.appendChild(p_tag);
+    }
+
+    // Show current/most recent job by default
+    if (currentFile) {
         viewBloack(currentFile);
     }
 }
-workExp();
+
+// Initialize work experience when DOM is ready
+document.addEventListener('DOMContentLoaded', function() {
+    console.log("DOM loaded, calling workExp()");
+    workExp();
+});
