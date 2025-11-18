@@ -9,7 +9,7 @@ const blogPosts = [
       "In my recent role at Patton Labs, I had the opportunity to lead the migration of a large monolithic application to a microservices architecture. This journey taught me valuable lessons about distributed systems, team coordination, and the importance of proper planning...",
     tags: ["Architecture", "Microservices", "Backend"],
     readTime: "5 min read",
-    featured: true,
+    featured: false,
   },
   {
     id: "performance-optimization",
@@ -22,7 +22,7 @@ const blogPosts = [
       "Performance optimization is both an art and a science. In this post, I'll walk you through the systematic approach I used to identify bottlenecks and implement solutions that resulted in significant performance gains...",
     tags: ["Performance", "API", "Optimization"],
     readTime: "7 min read",
-    featured: true,
+    featured: false,
   },
 ];
 
